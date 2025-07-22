@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name – Full-Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1e90ff;
+      --light-gray: #f9f9fb;
+      --gray: #6c757d;
+      --text: #212529;
+      --background: #ffffff;
+      --border: #e2e2e2;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Source Sans Pro', sans-serif;
+      background-color: var(--light-gray);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 18px;
+    }
+
+    header {
+      background: var(--background);
+      padding: 70px 20px 50px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+
+    header p {
+      color: var(--gray);
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    nav {
+      margin-top: 25px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 2.05rem;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #005f99;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+      background: var(--background);
+      border-radius: 10px;
+      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
+    }
+
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideFade 1s forwards;
+    }
+
+    section:nth-of-type(2) { animation-delay: 0.3s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; border-bottom: none; }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--blue);
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .video-container {
+      margin-top: 20px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 10px;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .contact-links a:hover {
+      color: #005f99;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 1rem;
+      color: var(--gray);
+      animation: fadeIn 1s ease-in-out 1s forwards;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+
+    /* Animations */
+    @keyframes slideFade {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Marina Basic</h1>
+    <p>Full-Stack Developer | JavaScript • Node.js • React</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#video">Demo</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm a full-stack developer with 6 years of experience working for various clients (Germany and USA based). I specialize in web development, but have also worked on mobile applications (React Native). I work primarily with JavaScript, TypeScript, React and Node.js but I don't shy away from learning new languages and skills (most recent were Scala and Kotlin, and I'm currently learning Go).
+      </p>
+      <p>
+        I care deeply about clean code, intuitive UX, and performance. Whether it's building an API or styling a responsive UI, each task is taken with a desire to deliver the best experience possible to the end user.
+      </p>
+    </section>
+
+    <section id="video">
+      <h2>Project</h2>
+      <p>Here’s a short demo of the project Nasi vrtovi where I was in the co-founder role:</p>
+      <div class="video-container">
+        <video controls>
+          <source src="nasivrtovi-cypress-presentation.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>I’m open to remote freelance work, part-time or full-time roles. Reach out:</p>
+      <div class="contact-links">
+        <a href="mailto:marina_basic@outlook.com">📧 marina_basic@outlook.com</a><br>
+        <a href="https://www.linkedin.com/in/marina-bašić-095b89177" target="_blank">💼 Marina Basic</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Marina Basic. All rights reserved.
+  </footer>
+
+</body>
+</html>
